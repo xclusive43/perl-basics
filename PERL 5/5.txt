@@ -1,0 +1,28 @@
+#5. Write a Perl script to translate a text in English language to text in some other language. It
+#should at least be able to generate something reasonable for the words: men, women, boys,
+#girls, dreams, vision, little, become and with regardless of the context in which these words
+#appear.
+
+#For example:
+#Enter a text: Little boys with dreams become men with vision
+#Translated text: chika bsarang bksa jumang onga mchkma bksa noisit
+#use strict; 
+
+#Program:
+
+my $str="Little boys with dreams become men with vision.\n";
+print $str;
+print "---------------\n";
+print "English\n---------------\n";
+
+$str =~ s/Little/chotte/g; 
+$str =~ s/boys/ladake/g; 
+$str =~ s/with/saath se/g; 
+$str =~ s/dreams/sapane/g; 
+$str =~ s/become/banana/g; 
+$str =~ s/men/purushon/g; 
+$str =~ s/vision/vijan/g; 
+
+print $str;
+print "---------------\n";
+print "Hindi\n---------------\n";
